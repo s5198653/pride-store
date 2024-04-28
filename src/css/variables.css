@@ -1,0 +1,12 @@
+:root {
+  --vp-320: 320px;
+  --vp-768: 768px;
+  --vp-1440: 1440px;
+
+  --color-gold: #cda46c;
+  --color-white: #fff;
+  --color-grey: #5b5b5b;
+  --color-beg: #e0d7c6;
+  --color-braun: #2b2a29;
+  --color-transparent: rgba(255, 255, 255, 0);
+}
