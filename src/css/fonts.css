@@ -1,0 +1,7 @@
+@font-face {
+  font-display: swap;
+  font-family: "EuroStyleDiai";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/src/fonts/eurostyle-normal.woff2") format("woff2");
+}
