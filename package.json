@@ -1,5 +1,5 @@
 {
-  "name": "vite-vanilla-ts-lib-starter",
+  "name": "pride-store",
   "private": true,
   "version": "0.0.2",
   "main": "./dist/vite-vanilla-ts-lib-starter.cjs",
