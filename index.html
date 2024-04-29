@@ -1,13 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Pride</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link--download" href="#" download
+                >Скачать каталог</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Live фото</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Наше производство</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <picture>
+          <!-- <source type="image/webp" srcset="src/images/header-foto.jpg.webp" /> -->
+          <img
+            src="src/images/header-foto.jpg"
+            alt=""
+            width="1440"
+            height="890"
+          />
+        </picture>
+        <div class="header__slogan">
+          <span class="header__slogan-text"> На корпус впереди </span>
+          <span class="header__slogan-text"> На корпус впереди </span>
+          <span class="header__slogan-text"> На корпус впереди </span>
+          <span class="header__slogan-text"> На корпус впереди </span>
+        </div>
+      </header>
+      <main></main>
+      <footer class="footer"></footer>
+    </div>
     <script type="module" src="/src/index.ts"></script>
   </body>
 </html>

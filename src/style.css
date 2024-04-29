@@ -1,5 +1,6 @@
 @import url("/src/css/fonts");
 @import url("/src/css/variables.css");
+@import url("/src/css/header.css");
 
 *,
 *::before,
@@ -46,6 +47,9 @@ video {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: var(--vp-1440);
+  width: 100%;
+  margin: 0 auto;
   position: relative;
 
   /* stylelint-disable-next-line */
