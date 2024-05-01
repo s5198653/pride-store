@@ -1,54 +1,97 @@
 .header {
   display: flex;
-  background-color: var(--color-beg);
   flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--color-beg);
+}
+
+.header__overlay {
+  display: none;
+
+  .header.is-open & {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(13, 29, 51, 0.4);
+  }
 }
 
 .header__nav {
-  width: 100%;
+  position: relative;
+
   display: flex;
+  gap: 45px;
   align-items: center;
   justify-content: center;
-  padding: 30px 100px;
+  width: 100%;
+  min-height: 130px;
+  padding: 25px 170px 10px;
+
   background-color: var(--color-braun);
+  color: var(--color-gold);
+
+  @media (max-width: 1439px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: 1024px) {
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
 }
 
 .header__nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 50px;
-  width: 100%;
-  color: var(--color-gold);
-  font-size: 18px;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+
+  font-size: 32px;
   text-transform: uppercase;
+  color: var(--color-gold);
+  list-style: none;
+
+  @media (max-width: 1439px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 1024px) {
+    position: absolute;
+    bottom: -160px;
+    left: calc(50% - 140px);
+
+    display: none;
+    flex-direction: column;
+    gap: 28px;
+    width: 280px;
+    padding: 20px;
+
+    background-color: var(--color-braun);
+  }
 }
 
-.header__slogan {
-  margin: 0;
-  color: var(--color-gold);
-  font-size: 22px;
-  text-transform: uppercase;
-  padding: 10px;
-  border-top: 15px solid var(--color-gold);
-
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
+.header.is-open .header__nav-list {
+  @media (max-width: 1024px) {
+    display: flex;
+  }
 }
 
 .header__nav-link {
   position: relative;
-  padding: 20px;
-  text-decoration: none;
+  padding: 10px;
+
   color: var(--color-gold);
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -58,6 +101,7 @@
   position: absolute;
   right: 50%;
   bottom: 0;
+
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -65,19 +109,58 @@
 }
 
 .header__nav-link--download {
-  padding: 20px 20px 15px;
-  text-decoration: none;
+  z-index: 10;
+  flex-shrink: 0;
+  padding: 30px 30px 25px;
+  border: 2px solid var(--color-gold);
+  border-radius: 45px;
+
   color: var(--color-gold);
   cursor: pointer;
-  border: 2px solid var(--color-gold);
-  border-radius: 30px;
+  font-size: 32px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @media (max-width: 1439px) {
+    padding: 20px 20px 15px;
+
+    font-size: 28px;
+  }
+}
+
+.header__slogan {
+  position: relative;
+  overflow-x: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  max-width: 100%;
+  height: 80px;
+  padding: 10px;
+  margin: 0;
+
+  font-size: 30px;
+  color: var(--color-gold);
+  border-top: 18px solid var(--color-gold);
+
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .header__slogan-text {
-  display: inline-block;
+  position: absolute;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
   white-space: nowrap;
-  text-indent: 0;
+  will-change: transform;
   animation: scroll 10s infinite linear;
+  text-indent: 0;
 }
 
 @keyframes scroll {
@@ -87,5 +170,67 @@
 
   to {
     transform: translateX(-100%);
+  }
+}
+
+.header__burger {
+  display: none;
+
+  @media (max-width: 1024px) {
+    z-index: 10;
+
+    display: inline-flex;
+    width: 18px;
+    height: 33px;
+    align-items: center;
+    justify-content: center;
+
+    border: unset;
+    border-radius: 30px;
+    background-color: var(--color-transparent);
+
+    color: var(--color-gold);
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+  }
+}
+
+.header.is-open .header__burger {
+  border: 1px solid var(--color-gold);
+}
+
+.header__burger-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__burger svg {
+  fill: currentColor;
+}
+
+.header__logo {
+  position: absolute;
+  top: 170px;
+  right: 85px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    fill: transparent;
+  }
+
+  @media (max-width: 1024px) {
+    position: relative;
+    top: unset;
+    right: unset;
+
+    svg {
+      width: 65px;
+      height: 66px;
+    }
   }
 }

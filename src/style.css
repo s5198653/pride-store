@@ -28,7 +28,7 @@ html {
 body {
   background-color: var(--color-grey);
   height: 100%;
-  min-width: var(--vp-320);
+  min-width: var(--vp-350);
   width: 100%;
 }
 
@@ -39,7 +39,6 @@ a {
 img,
 video {
   display: block;
-  height: auto;
   max-width: 100%;
 }
 
