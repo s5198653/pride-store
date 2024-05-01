@@ -2,45 +2,91 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/src/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/src/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/src/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pride</title>
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header" data-header="sticky">
         <nav class="header__nav">
+          <div class="header__overlay"></div>
+          <button
+            class="header__burger"
+            type="button"
+            aria-label="Переключатель отображения меню"
+            aria-pressed="false"
+            data-burger="burger"
+          >
+            <span class="header__burger-icon">
+              <svg width="5" height="20">
+                <use xlink:href="/src/images/spritemap.svg#menu"></use>
+              </svg>
+            </span>
+          </button>
+          <a
+            class="header__nav-link--download"
+            href="/src/download/Pride-catalog.pdf"
+            download
+          >
+            Скачать каталог
+          </a>
+          <a class="header__logo">
+            <svg width="285" height="300">
+              <use xlink:href="/src/images/spritemap.svg#logo"></use>
+            </svg>
+          </a>
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a class="header__nav-link--download" href="#" download
-                >Скачать каталог</a
-              >
+              <a class="header__nav-link" href="#" data-close-menu="close-menu">
+                Live фото
+              </a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Live фото</a>
+              <a class="header__nav-link" href="#" data-close-menu="close-menu">
+                Наше производство
+              </a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Наше производство</a>
-            </li>
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Контакты</a>
+              <a class="header__nav-link" href="#" data-close-menu="close-menu">
+                Контакты
+              </a>
             </li>
           </ul>
         </nav>
         <picture>
-          <!-- <source type="image/webp" srcset="src/images/header-foto.jpg.webp" /> -->
           <img
             src="src/images/header-foto.jpg"
             alt=""
             width="1440"
-            height="890"
+            height="895"
           />
         </picture>
         <div class="header__slogan">
-          <span class="header__slogan-text"> На корпус впереди </span>
-          <span class="header__slogan-text"> На корпус впереди </span>
-          <span class="header__slogan-text"> На корпус впереди </span>
-          <span class="header__slogan-text"> На корпус впереди </span>
+          <div class="header__slogan-text">
+            <span>На корпус впереди</span>
+            <span>На корпус впереди</span>
+            <span>На корпус впереди</span>
+            <span>На корпус впереди</span>
+          </div>
         </div>
       </header>
       <main></main>

@@ -1,6 +1,7 @@
 :root {
-  --vp-320: 320px;
+  --vp-350: 350px;
   --vp-768: 768px;
+  --vp-1024: 1024px;
   --vp-1440: 1440px;
 
   --color-gold: #cda46c;
