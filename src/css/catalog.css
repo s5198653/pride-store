@@ -16,8 +16,12 @@
 .catalog__title {
   margin: 0;
 
-  font-size: 56px;
+  font-size: 50px;
   text-transform: uppercase;
+
+  @media (max-width: 1439px) {
+    font-size: 34px;
+  }
 
   @media (max-width: 1024px) {
     font-size: 24px;
@@ -46,9 +50,10 @@
   flex-direction: column;
   gap: 50px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 100%;
   padding-bottom: 95px;
+  color: var(--color-braun);
   border-bottom: 2px solid var(--color-gold);
 
   text-align: center;
@@ -77,8 +82,12 @@
   font-size: 30px;
   text-transform: uppercase;
 
+  @media (max-width: 1439px) {
+    font-size: 24px;
+  }
+
   @media (max-width: 1024px) {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 

@@ -43,7 +43,7 @@
             </span>
           </button>
           <a
-            class="header__nav-link--download"
+            class="header__download"
             href="/src/download/Pride-catalog.pdf"
             download
           >
@@ -55,6 +55,15 @@
             </svg>
           </a>
           <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="#catalog"
+                data-close-menu="close-menu"
+              >
+                Продукция
+              </a>
+            </li>
             <li class="header__nav-item">
               <a class="header__nav-link" href="#" data-close-menu="close-menu">
                 Live фото
@@ -72,225 +81,162 @@
             </li>
           </ul>
         </nav>
-        <picture>
+        <picture class="header__image">
+          <source srcset="src/images/header-photo.webp" type="image/webp" />
           <img
-            src="src/images/header-foto.jpg"
+            src="src/images/header-photo.jpg"
             alt=""
             width="1440"
             height="895"
           />
         </picture>
         <div class="header__slogan">
-          <div class="header__slogan-text">
-            <span>На корпус впереди</span>
-            <span>На корпус впереди</span>
-            <span>На корпус впереди</span>
-            <span>На корпус впереди</span>
-          </div>
+          <p class="header__slogan-text">
+            На корпус впереди&emsp;На корпус впереди&emsp;На корпус
+            впереди&emsp;На корпус впереди&emsp;На корпус впереди
+          </p>
         </div>
       </header>
       <main>
+        <h1 class="visually-hidden">Магазин мебели "Прайд"</h1>
         <section class="catalog">
-          <h2 class="catalog__title">Продукция</h2>
+          <h2 class="catalog__title" id="catalog">Продукция</h2>
           <ul class="catalog__list">
-            <li class="catalog__item">
-              <h3 class="catalog__item-title">Туалетные столы</h3>
-              <span>
-                <svg width="220" height="230">
-                  <use
-                    xlink:href="/src/images/spritemap.svg#table-dressing"
-                  ></use>
-                </svg>
-              </span>
+            <li>
+              <a class="catalog__item" href="table-dressings">
+                <h3 class="catalog__item-title">Туалетные столы</h3>
+                <span>
+                  <svg width="220" height="230">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#table-dressing"
+                    ></use>
+                  </svg>
+                </span>
+              </a>
             </li>
-            <li class="catalog__item">
-              <h3 class="catalog__item-title">Зеркала/ Стеллажи/ Полки</h3>
-              <span>
-                <svg width="220" height="230">
-                  <use xlink:href="/src/images/spritemap.svg#mirror"></use>
-                </svg>
-              </span>
+            <li>
+              <a class="catalog__item" href="table-dressings">
+                <h3 class="catalog__item-title">Зеркала/ Стеллажи/ Полки</h3>
+                <span>
+                  <svg width="220" height="230">
+                    <use xlink:href="/src/images/spritemap.svg#mirror"></use>
+                  </svg>
+                </span>
+              </a>
             </li>
-            <li class="catalog__item">
-              <h3 class="catalog__item-title">Спальни</h3>
-              <span>
-                <svg width="220" height="230">
-                  <use xlink:href="/src/images/spritemap.svg#bed"></use>
-                </svg>
-              </span>
+            <li>
+              <a class="catalog__item" href="table-dressings">
+                <h3 class="catalog__item-title">Спальни</h3>
+                <span>
+                  <svg width="220" height="230">
+                    <use xlink:href="/src/images/spritemap.svg#bed"></use>
+                  </svg>
+                </span>
+              </a>
             </li>
-            <li class="catalog__item">
-              <h3 class="catalog__item-title">Комоды</h3>
-              <span>
-                <svg width="220" height="230">
-                  <use xlink:href="/src/images/spritemap.svg#chest"></use>
-                </svg>
-              </span>
+            <li>
+              <a class="catalog__item" href="table-dressings">
+                <h3 class="catalog__item-title">Комоды</h3>
+                <span>
+                  <svg width="220" height="230">
+                    <use xlink:href="/src/images/spritemap.svg#chest"></use>
+                  </svg>
+                </span>
+              </a>
             </li>
-            <li class="catalog__item">
-              <h3 class="catalog__item-title">ТВ тумбы</h3>
-              <span>
-                <svg width="220" height="230">
-                  <use xlink:href="/src/images/spritemap.svg#tv"></use>
-                </svg>
-              </span>
+            <li>
+              <a class="catalog__item" href="table-dressings">
+                <h3 class="catalog__item-title">ТВ тумбы</h3>
+                <span>
+                  <svg width="220" height="230">
+                    <use xlink:href="/src/images/spritemap.svg#tv"></use>
+                  </svg>
+                </span>
+              </a>
             </li>
-            <li class="catalog__item">
-              <h3 class="catalog__item-title">Шкафы</h3>
-              <span>
-                <svg width="220" height="230">
-                  <use xlink:href="/src/images/spritemap.svg#cabinet"></use>
-                </svg>
-              </span>
+            <li>
+              <a class="catalog__item" href="table-dressings">
+                <h3 class="catalog__item-title">Шкафы</h3>
+                <span>
+                  <svg width="220" height="230">
+                    <use xlink:href="/src/images/spritemap.svg#cabinet"></use>
+                  </svg>
+                </span>
+              </a>
             </li>
-            <li class="catalog__item">
-              <h3 class="catalog__item-title">Прихожие</h3>
-              <span>
-                <svg width="220" height="230">
-                  <use xlink:href="/src/images/spritemap.svg#wardrobe"></use>
-                </svg>
-              </span>
+            <li>
+              <a class="catalog__item" href="table-dressings">
+                <h3 class="catalog__item-title">Прихожие</h3>
+                <span>
+                  <svg width="220" height="230">
+                    <use xlink:href="/src/images/spritemap.svg#wardrobe"></use>
+                  </svg>
+                </span>
+              </a>
             </li>
-            <li class="catalog__item">
-              <h3 class="catalog__item-title">Для кухни</h3>
-              <span>
-                <svg width="220" height="230">
-                  <use xlink:href="/src/images/spritemap.svg#kitchen"></use>
-                </svg>
-              </span>
+            <li>
+              <a class="catalog__item" href="table-dressings">
+                <h3 class="catalog__item-title">Для кухни</h3>
+                <span>
+                  <svg width="220" height="230">
+                    <use xlink:href="/src/images/spritemap.svg#kitchen"></use>
+                  </svg>
+                </span>
+              </a>
             </li>
-            <li class="catalog__item">
-              <h3 class="catalog__item-title">Стулья</h3>
-              <span>
-                <svg width="220" height="230">
-                  <use xlink:href="/src/images/spritemap.svg#chair"></use>
-                </svg>
-              </span>
+            <li>
+              <a class="catalog__item" href="table-dressings">
+                <h3 class="catalog__item-title">Стулья</h3>
+                <span>
+                  <svg width="220" height="230">
+                    <use xlink:href="/src/images/spritemap.svg#chair"></use>
+                  </svg>
+                </span>
+              </a>
             </li>
-            <li
-              class="catalog__item catalog__item--last catalog__item--underline"
-            >
-              <h3 class="catalog__item-title">Компьютерные столы</h3>
-              <span>
-                <svg width="220" height="230">
-                  <use xlink:href="/src/images/spritemap.svg#pc-table"></use>
-                </svg>
-              </span>
+            <li>
+              <a
+                class="catalog__item catalog__item--last catalog__item--underline"
+                href="table-dressings"
+              >
+                <h3 class="catalog__item-title">Компьютерные столы</h3>
+                <span>
+                  <svg width="220" height="230">
+                    <use xlink:href="/src/images/spritemap.svg#pc-table"></use>
+                  </svg>
+                </span>
+              </a>
             </li>
-            <li class="catalog__item catalog__item--last">
-              <h3 class="catalog__item-title">Журнальные столы</h3>
-              <span>
-                <svg width="220" height="230">
-                  <use xlink:href="/src/images/spritemap.svg#table"></use>
-                </svg>
-              </span>
+            <li>
+              <a
+                class="catalog__item catalog__item--last"
+                href="table-dressings"
+              >
+                <h3 class="catalog__item-title">Журнальные столы</h3>
+                <span>
+                  <svg width="220" height="230">
+                    <use xlink:href="/src/images/spritemap.svg#table"></use>
+                  </svg>
+                </span>
+              </a>
             </li>
-            <li class="catalog__item catalog__item--last">
-              <h3 class="catalog__item-title">Прочее</h3>
-              <span>
-                <svg width="220" height="230">
-                  <use xlink:href="/src/images/spritemap.svg#other"></use>
-                </svg>
-              </span>
-            </li>
-          </ul>
-        </section>
-        <section class="product">
-          <h2 class="product__title">Туалетные столы</h2>
-          <ul class="product__list">
-            <li class="product__item">
-              <h3 class="product__item-title">Ривьера 1</h3>
-              <img
-                src="src/images/table-dressing/table-dressing-riviera-1-carbon.png"
-                alt=""
-                width="120"
-                height="120"
-              />
-              <!-- <img
-                src="src/images/table-dressing/table-dressing-riviera-1-carbon1.png"
-                alt=""
-                width="120"
-                height="120"
-              />
-              <img
-                src="src/images/table-dressing/table-dressing-riviera-1-door-craft1.png"
-                alt=""
-                width="120"
-                height="120"
-              /> -->
-            </li>
-            <li class="product__item">
-              <h3 class="product__item-title">Ривьера 2</h3>
-              <img
-                src="src/images/table-dressing/table-dressing-riviera-2.png"
-                alt=""
-                width="120"
-                height="120"
-              />
-              <!-- <img
-                src="src/images/table-dressing/table-dressing-riviera-2-door-craft.png"
-                alt=""
-                width="120"
-                height="120"
-              /> -->
-            </li>
-            <li class="product__item">
-              <h3 class="product__item-title">Ривьера 3</h3>
-              <img
-                src="src/images/table-dressing/table-dressing-riviera-3-door-craft.png"
-                alt=""
-                width="120"
-                height="120"
-              />
-              <!-- <img
-                src="src/images/table-dressing/table-dressing-riviera-3-door-craft1.png"
-                alt=""
-                width="120"
-                height="120"
-              /> -->
-            </li>
-            <li class="product__item product__item--last">
-              <h3 class="product__item-title">Ривьера 4 Лайт</h3>
-              <img
-                src="src/images/table-dressing/table-dressing-riviera-4-light.png"
-                alt=""
-                width="120"
-                height="120"
-              />
-              <!-- <img
-                src="src/images/table-dressing/table-dressing-riviera-4-light-craft-gold.png"
-                alt=""
-                width="120"
-                height="120"
-              /> -->
-            </li>
-            <li class="product__item product__item--last">
-              <h3 class="product__item-title">Ривьера 5 ящ.</h3>
-              <img
-                src="src/images/table-dressing/table-dressing-riviera-5.png"
-                alt=""
-                width="120"
-                height="120"
-              />
-              <!-- <img
-                src="src/images/table-dressing/table-dressing-riviera-5-craft-tabak.png"
-                alt=""
-                width="120"
-                height="120"
-              /> -->
-            </li>
-            <li class="product__item product__item--last">
-              <h3 class="product__item-title">Ривьера 5 Люкс ящ.</h3>
-              <img
-                src="src/images/table-dressing/table-dressing-riviera-5-luxe.png"
-                alt=""
-                width="120"
-                height="120"
-              />
+            <li>
+              <a
+                class="catalog__item catalog__item--last"
+                href="table-dressings"
+              >
+                <h3 class="catalog__item-title">Прочее</h3>
+                <span>
+                  <svg width="220" height="230">
+                    <use xlink:href="/src/images/spritemap.svg#other"></use>
+                  </svg>
+                </span>
+              </a>
             </li>
           </ul>
         </section>
       </main>
+
       <footer class="footer">
         <p class="footer__place">
           <span>
@@ -315,7 +261,7 @@
             </span>
           </div>
         </div>
-        <ul class="contacts__list">
+        <ul class="contacts">
           <li class="contacts__item">
             <span>
               <svg width="13" height="30">
