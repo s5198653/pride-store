@@ -2,6 +2,7 @@ import "./style.css";
 import "./css/fonts.css";
 import "./css/variables.css";
 import "./css/modal.css";
+import "./css/title.css";
 import "./css/header.css";
 import "./css/footer.css";
 import "./css/contacts.css";
