@@ -32,6 +32,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  background-color: var(--color-beg);
+}
+
 img,
 video {
   display: block;

@@ -69,7 +69,7 @@
 
   @media (max-width: 1024px) {
     position: absolute;
-    bottom: -200px;
+    bottom: -160px;
     left: 20px;
 
     display: none;
@@ -252,6 +252,12 @@
   }
 }
 
+.header__logo--contacts {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
 .header__image {
   img {
     height: 895px;
@@ -275,4 +281,8 @@
       height: 200px;
     }
   }
+}
+
+.header__map {
+  height: 400px;
 }
