@@ -55,6 +55,12 @@
   border: unset;
 }
 
+.product__item--no-border {
+  @media (max-width: 1024px) {
+    border: unset;
+  }
+}
+
 .product__item--underline {
   @media (max-width: 1024px) {
     border-bottom: 2px solid var(--color-gold);
