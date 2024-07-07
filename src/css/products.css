@@ -73,7 +73,7 @@
 }
 
 .product__item-title {
-  display: flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   gap: 5px;
