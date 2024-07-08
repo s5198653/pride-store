@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/src/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/src/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/src/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link
+      rel="stylesheet"
+      href="/node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pride</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" data-header="sticky">
+        <nav class="header__nav">
+          <div class="header__overlay"></div>
+          <button
+            class="header__burger"
+            type="button"
+            aria-label="Переключатель отображения меню"
+            aria-pressed="false"
+            data-burger="burger"
+          >
+            <span class="header__burger-icon">
+              <svg width="5" height="20">
+                <use xlink:href="/src/images/spritemap.svg#menu"></use>
+              </svg>
+            </span>
+          </button>
+          <a
+            class="header__download"
+            href="/src/download/Pride-catalog.pdf"
+            download
+          >
+            Скачать каталог
+          </a>
+          <a class="header__logo">
+            <svg width="200" height="200">
+              <use xlink:href="/src/images/spritemap.svg#logo"></use>
+            </svg>
+          </a>
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="index.html"
+                data-close-menu="close-menu"
+              >
+                Продукция
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#" data-close-menu="close-menu">
+                Наше производство
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="contacts"
+                data-close-menu="close-menu"
+              >
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <picture class="header__image">
+          <source srcset="/src/images/header-photo.webp" type="image/webp" />
+          <img
+            src="/src/images/header-photo.jpg"
+            alt=""
+            width="1440"
+            height="800"
+          />
+        </picture>
+        <p class="header__slogan">
+          На корпус впереди&emsp;На корпус впереди&emsp;На корпус
+          впереди&emsp;На корпус впереди&emsp;На корпус впереди&emsp;На корпус
+          впереди&emsp;На корпус впереди&emsp;На корпус впереди
+        </p>
+      </header>
+      <main>
+        <section class="product">
+          <h1 class="title">Для кухни</h1>
+          <ul class="product__list">
+            <li class="product__item" data-open-modal="product">
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title">Диван Бостон</span>
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="/src/images/kitchen/sofa-boston/sofa-boston.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/sofa-boston/sofa-boston.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">
+                820х1170х1930 Спальное место 1000х1750
+              </p>
+            </li>
+            <li class="product__item" data-open-modal="product">
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title"
+                  >Кухонный уголок Бостон</span
+                >
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="/src/images/kitchen/kc-boston/kc-boston.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston/kc-boston.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">820х1170х1170</p>
+            </li>
+            <li class="product__item" data-open-modal="product">
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title"
+                  >Кухонный уголок Бостон лайт</span
+                >
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/kc-boston-light/kc-boston-light.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-light/kc-boston-light.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/kc-boston-light/kc-boston-light-venge.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-light/kc-boston-light-venge.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">820х1564х1130</p>
+            </li>
+            <li class="product__item" data-open-modal="product">
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title"
+                  >Кухонный уголок Бостон 1</span
+                >
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/kc-boston-1/kc-boston-1-craft-golden-brown.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-1/kc-boston-1-craft-golden-brown.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">820х1170х1170</p>
+            </li>
+            <li class="product__item" data-open-modal="product">
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title"
+                  >Кухонный уголок Бостон 1 лайт</span
+                >
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/kc-boston-1-light/kc-boston-1-light.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-1-light/kc-boston-1-light.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/kc-boston-1-light/kc-boston-1-light-violent.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-1-light/kc-boston-1-light-violent.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">820х1564х1130</p>
+            </li>
+            <li class="product__item" data-open-modal="product">
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title"
+                  >Кухонный уголок Бостон 2</span
+                >
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="/src/images/kitchen/kc-boston-2/kc-boston-2.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-2/kc-boston-2.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/kc-boston-2/kc-boston-2-shimo.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-2/kc-boston-2-shimo.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">850х1665х1198</p>
+            </li>
+            <li class="product__item" data-open-modal="product">
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title"
+                  >Кухонный уголок Бостон 2 лайт</span
+                >
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/kc-boston-2-light/kc-boston-2-light.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-2-light/kc-boston-2-light.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/kc-boston-2-light/kc-boston-2-light-craft.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-2-light/kc-boston-2-light-craft.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">850х1665х1198</p>
+            </li>
+            <li class="product__item" data-open-modal="product">
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title"
+                  >Кухонный уголок Бостон 3</span
+                >
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="/src/images/kitchen/kc-boston-3/kc-boston-3.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-3/kc-boston-3.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">850х1564х1180</p>
+            </li>
+            <li class="product__item" data-open-modal="product">
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title"
+                  >Кухонный уголок Бостон 4</span
+                >
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="/src/images/kitchen/kc-boston-4/kc-boston-4.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-4/kc-boston-4.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">850х1564х1180</p>
+            </li>
+            <li class="product__item" data-open-modal="product">
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title"
+                  >Кухонный уголок Бостон Макси</span
+                >
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/kc-boston-maxi/kc-boston-maxi.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-maxi/kc-boston-maxi.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">850х1800х1400</p>
+            </li>
+            <li class="product__item" data-open-modal="product">
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title"
+                  >Кухонный уголок Бостон Премьер</span
+                >
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/kc-boston-2-light/kc-boston-2-light.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-2-light/kc-boston-2-light.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/kc-boston-2-light/kc-boston-2-light-craft.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-2-light/kc-boston-2-light-craft.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">850х1564х1180</p>
+            </li>
+            <li class="product__item" data-open-modal="product">
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title"
+                  >Стол-книжка Арго 3</span
+                >
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/table-argo-3/table-argo-3.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/table-argo-3/table-argo-3.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">770х800х335/1500</p>
+            </li>
+            <li
+              class="product__item product__item--last"
+              data-open-modal="product"
+            >
+              <h2 class="product__item-title">
+                <span>
+                  <svg width="17" height="17">
+                    <use
+                      xlink:href="/src/images/spritemap.svg#mark-right"
+                    ></use>
+                  </svg>
+                </span>
+                <span data-product="product__item-title"
+                  >Стол обеденный раздвижной 7</span
+                >
+                <span>
+                  <svg width="17" height="17">
+                    <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                  </svg>
+                </span>
+              </h2>
+              <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/table-sliding/table-sliding-1.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/table-sliding/table-sliding-1.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/table-sliding/table-sliding-2.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/table-sliding/table-sliding-2.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/table-sliding/table-sliding-3.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/table-sliding/table-sliding-3.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/table-sliding/table-sliding-4.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/table-sliding/table-sliding-4.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/table-sliding/table-sliding-5.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/table-sliding/table-sliding-5.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
+              </ul>
+              <p class="product__item-info">755х650х1100/1500</p>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__place">
+          <span>
+            <svg width="22" height="33">
+              <use xlink:href="/src/images/spritemap.svg#geo"></use>
+            </svg>
+          </span>
+          г.Волгодонск
+        </p>
+        <div class="footer__logo-wrap">
+          <a class="footer__logo">
+            <svg width="81" height="87">
+              <use xlink:href="/src/images/spritemap.svg#logo"></use>
+            </svg>
+          </a>
+          <div class="footer__rights-wrap">
+            <p class="footer__rights">Copyrights 2020</p>
+            <span>
+              <svg width="11" height="11">
+                <use xlink:href="/src/images/spritemap.svg#corp"></use>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <ul class="contacts">
+          <li class="contacts__item">
+            <span>
+              <svg width="13" height="30">
+                <use xlink:href="/src/images/spritemap.svg#phone"></use>
+              </svg>
+            </span>
+            <div class="contacts__phones">
+              <a class="contacts__link" href="tel:+79185825089">+79185825089</a>
+              <a class="contacts__link" href="tel:+79181717480">+79181717480</a>
+              <a class="contacts__link" href="tel:+79281257783">+79281257783</a>
+              <a class="contacts__link" href="tel:+79185831250">+79185831250</a>
+            </div>
+          </li>
+          <li class="contacts__item">
+            <span>
+              <svg width="19" height="14">
+                <use xlink:href="/src/images/spritemap.svg#mail"></use>
+              </svg>
+            </span>
+            <a class="contacts__link" href="mailto:oneel_@mail.ru">
+              oneel_@mail.ru
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="modal" data-modal="product">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h3 class="modal__item-title">
+            <span>
+              <svg width="17" height="17">
+                <use xlink:href="/src/images/spritemap.svg#mark-right"></use>
+              </svg>
+            </span>
+            <span class="modal__title"></span>
+            <span>
+              <svg width="17" height="17">
+                <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+              </svg>
+            </span>
+          </h3>
+          <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides"></ul>
+            </div>
+
+            <div
+              class="glide__arrows modal__slide-arrows"
+              data-glide-el="controls"
+            >
+              <button
+                class="glide__arrow glide__arrow--left modal__slide-arrow modal__slide-arrow--left"
+                data-glide-dir="<"
+              >
+                <svg width="17" height="17">
+                  <use xlink:href="/src/images/spritemap.svg#mark-right"></use>
+                </svg>
+              </button>
+              <button
+                class="glide__arrow glide__arrow--right modal__slide-arrow modal__slide-arrow--right"
+                data-glide-dir=">"
+              >
+                <svg width="17" height="17">
+                  <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="modal__item-info">
+            <span>Размеры (ВхГхШ)</span>
+            <span class="modal__item-size"></span>
+          </div>
+
+          <button
+            class="modal__close-btn btn-reset"
+            type="button"
+            aria-label="Закрыть попап"
+            data-close-modal
+          >
+            <svg width="20" height="20">
+              <use xlink:href="/src/images/spritemap.svg#x-mark"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/index.ts"></script>
+  </body>
+</html>
