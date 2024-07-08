@@ -3,12 +3,13 @@
   flex-direction: column;
   gap: 40px;
   align-items: center;
-  padding: 20px 15px;
+  padding: 40px 15px;
 
   background-color: var(--color-beg);
 
   @media (max-width: 1024px) {
-    gap: 10px;
+    padding: 20px 15px;
+    gap: 20px;
   }
 }
 
@@ -81,6 +82,7 @@
   padding: 0;
 
   font-size: 21px;
+  font-weight: 400;
   text-transform: uppercase;
 
   svg {
