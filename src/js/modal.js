@@ -31,9 +31,15 @@ const openModal = event => {
   modalOpenElements.forEach(el => el.removeEventListener("click", openModal));
   document.addEventListener("keydown", onKeydownEscape);
   modalCloseElements.forEach(el => el.addEventListener("click", closeModal));
-  size.textContent = event.currentTarget.querySelector(
+  const productSizes = event.currentTarget.querySelectorAll(
     ".product__item-info"
-  ).textContent;
+  );
+  productSizes.forEach(element => {
+    const productSize = document.createElement("span");
+    productSize.textContent = element.textContent;
+    size.appendChild(productSize);
+  });
+
   title.textContent = event.currentTarget.querySelector(
     `[data-product="product__item-title"]`
   ).textContent;
@@ -60,8 +66,8 @@ const closeModal = () => {
   modalCloseElements.forEach(el => el.removeEventListener("click", closeModal));
   document.removeEventListener("keydown", onKeydownEscape);
   modalOpenElements.forEach(el => el.addEventListener("click", openModal));
-  size.textContent = "";
   title.textContent = "";
+  size.innerHTML = "";
   modal.querySelector(".glide__slides").innerHTML = "";
   modal.querySelector(".glide__arrows").classList.add("modal__slide-arrows");
 };
