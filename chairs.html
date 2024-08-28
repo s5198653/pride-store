@@ -21,7 +21,18 @@
       href="/src/images/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
-
+    <link
+      rel="preload"
+      href="/src/fonts/montserrat-v26-cyrillic_latin-regular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/src/fonts/montserrat-v26-cyrillic_latin-800.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
@@ -59,7 +70,7 @@
           >
             Скачать каталог
           </a>
-          <a class="header__logo">
+          <a class="header__logo" href="index.html">
             <svg width="200" height="200">
               <use xlink:href="/src/images/spritemap.svg#logo"></use>
             </svg>
@@ -155,7 +166,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">850х360х440</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">850х360х440</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -189,7 +202,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">850х360х440</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">850х360х440</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -223,7 +238,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">850х360х440</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">850х360х440</p>
+              </div>
             </li>
             <li
               class="product__item product__item--last product__item--underline"
@@ -248,11 +265,11 @@
                 <li class="product__item-img">
                   <picture>
                     <source
-                      srcset="/src/images/chair/chairs/prestige.webp"
+                      srcset="/src/images/chair/chairs/pekin.webp"
                       type="image/webp"
                     />
                     <img
-                      src="/src/images/chair/chairs/prestige.png"
+                      src="/src/images/chair/chairs/pekin.png"
                       alt=""
                       width="350"
                       height="350"
@@ -260,7 +277,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">1020х400х450</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">1020х400х450</p>
+              </div>
             </li>
             <li
               class="product__item product__item--last"
@@ -297,7 +316,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">440х350х350</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">440х350х350</p>
+              </div>
             </li>
             <li
               class="product__item product__item--last"
@@ -336,7 +357,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">440х350х350</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">440х350х350</p>
+              </div>
             </li>
           </ul>
         </section>
@@ -351,7 +374,7 @@
           г.Волгодонск
         </p>
         <div class="footer__logo-wrap">
-          <a class="footer__logo">
+          <a class="footer__logo" href="index.html">
             <svg width="81" height="87">
               <use xlink:href="/src/images/spritemap.svg#logo"></use>
             </svg>
@@ -440,7 +463,7 @@
 
           <div class="modal__item-info">
             <span>Размеры (ВхГхШ)</span>
-            <span class="modal__item-size"></span>
+            <div class="modal__item-size"></div>
           </div>
 
           <button

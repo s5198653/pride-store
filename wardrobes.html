@@ -21,7 +21,18 @@
       href="/src/images/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
-
+    <link
+      rel="preload"
+      href="/src/fonts/montserrat-v26-cyrillic_latin-regular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/src/fonts/montserrat-v26-cyrillic_latin-800.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
@@ -59,7 +70,7 @@
           >
             Скачать каталог
           </a>
-          <a class="header__logo">
+          <a class="header__logo" href="index.html">
             <svg width="200" height="200">
               <use xlink:href="/src/images/spritemap.svg#logo"></use>
             </svg>
@@ -155,7 +166,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">2100х380х1800</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">2100х380х1800</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -205,7 +218,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">2100х380х800</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">2100х380х800</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -226,6 +241,22 @@
                 </span>
               </h2>
               <ul class="product__item-img-wrapper">
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/wardrobe/sicily-m2/sicily-m2-mirror.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/wardrobe/sicily-m2/sicily-m2-mirror.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
                 <li class="product__item-img">
                   <picture>
                     <source
@@ -256,24 +287,10 @@
                     />
                   </picture>
                 </li>
-                <li class="product__item-img">
-                  <picture>
-                    <source
-                      srcset="
-                        /src/images/wardrobe/sicily-m2/sicily-m2-mirror.webp
-                      "
-                      type="image/webp"
-                    />
-                    <img
-                      src="/src/images/wardrobe/sicily-m2/sicily-m2-mirror.png"
-                      alt=""
-                      width="350"
-                      height="350"
-                    />
-                  </picture>
-                </li>
               </ul>
-              <p class="product__item-info">885х380х500</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">885х380х500</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -294,36 +311,6 @@
                 </span>
               </h2>
               <ul class="product__item-img-wrapper">
-                <li class="product__item-img">
-                  <picture>
-                    <source
-                      srcset="/src/images/wardrobe/sicily-m3/sicily-m3.webp"
-                      type="image/webp"
-                    />
-                    <img
-                      src="/src/images/wardrobe/sicily-m3/sicily-m3.png"
-                      alt=""
-                      width="350"
-                      height="350"
-                    />
-                  </picture>
-                </li>
-                <li class="product__item-img">
-                  <picture>
-                    <source
-                      srcset="
-                        /src/images/wardrobe/sicily-m3/sicily-m3-open.webp
-                      "
-                      type="image/webp"
-                    />
-                    <img
-                      src="/src/images/wardrobe/sicily-m3/sicily-m3-open.png"
-                      alt=""
-                      width="350"
-                      height="350"
-                    />
-                  </picture>
-                </li>
                 <li class="product__item-img">
                   <picture>
                     <source
@@ -357,7 +344,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">2100х380х600</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">2100х380х600</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -409,7 +398,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">2100х380х400/500</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">2100х380х400/500</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -461,7 +452,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">2100х380х400/500</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">2100х380х400/500</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -497,7 +490,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">2100х400х800</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">2100х400х800</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -533,7 +528,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">2100х400х1600</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">2100х400х1600</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -569,7 +566,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">2100х330х1200</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">2100х330х1200</p>
+              </div>
             </li>
 
             <li class="product__item" data-open-modal="product">
@@ -608,7 +607,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">1250х224х880</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">1250х224х880</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -646,7 +647,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">1250х224х600</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">1250х224х600</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -700,7 +703,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">480х350х650</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">480х350х650</p>
+              </div>
             </li>
             <li
               class="product__item product__item--last"
@@ -741,7 +746,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">1820х226х602</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">1820х226х602</p>
+              </div>
             </li>
             <li
               class="product__item product__item--last"
@@ -782,7 +789,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">1820х226х602</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">1820х226х602</p>
+              </div>
             </li>
           </ul>
         </section>
@@ -797,7 +806,7 @@
           г.Волгодонск
         </p>
         <div class="footer__logo-wrap">
-          <a class="footer__logo">
+          <a class="footer__logo" href="index.html">
             <svg width="81" height="87">
               <use xlink:href="/src/images/spritemap.svg#logo"></use>
             </svg>
@@ -886,7 +895,7 @@
 
           <div class="modal__item-info">
             <span>Размеры (ВхГхШ)</span>
-            <span class="modal__item-size"></span>
+            <div class="modal__item-size"></div>
           </div>
 
           <button

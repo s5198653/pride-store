@@ -21,7 +21,18 @@
       href="/src/images/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
-
+    <link
+      rel="preload"
+      href="/src/fonts/montserrat-v26-cyrillic_latin-regular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/src/fonts/montserrat-v26-cyrillic_latin-800.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="/node_modules/@glidejs/glide/dist/css/glide.core.min.css"
@@ -59,7 +70,7 @@
           >
             Скачать каталог
           </a>
-          <a class="header__logo">
+          <a class="header__logo" href="index.html">
             <svg width="200" height="200">
               <use xlink:href="/src/images/spritemap.svg#logo"></use>
             </svg>
@@ -141,9 +152,10 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">
-                820х1170х1930 Спальное место 1000х1750
-              </p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">820х1170х1930</p>
+                <p class="product__item-info">Спальное место 1000х1750</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -179,7 +191,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">820х1170х1170</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">820х1170х1170</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -233,7 +247,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">820х1564х1130</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">820х1170х1170</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -271,7 +287,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">820х1170х1170</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">850х1564х1130</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -296,22 +314,6 @@
                   <picture>
                     <source
                       srcset="
-                        /src/images/kitchen/kc-boston-1-light/kc-boston-1-light.webp
-                      "
-                      type="image/webp"
-                    />
-                    <img
-                      src="/src/images/kitchen/kc-boston-1-light/kc-boston-1-light.png"
-                      alt=""
-                      width="350"
-                      height="350"
-                    />
-                  </picture>
-                </li>
-                <li class="product__item-img">
-                  <picture>
-                    <source
-                      srcset="
                         /src/images/kitchen/kc-boston-1-light/kc-boston-1-light-violent.webp
                       "
                       type="image/webp"
@@ -324,8 +326,26 @@
                     />
                   </picture>
                 </li>
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="
+                        /src/images/kitchen/kc-boston-1-light/kc-boston-1-light.webp
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-1-light/kc-boston-1-light.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
               </ul>
-              <p class="product__item-info">820х1564х1130</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">850х1564х1130</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -349,20 +369,6 @@
                 <li class="product__item-img">
                   <picture>
                     <source
-                      srcset="/src/images/kitchen/kc-boston-2/kc-boston-2.webp"
-                      type="image/webp"
-                    />
-                    <img
-                      src="/src/images/kitchen/kc-boston-2/kc-boston-2.png"
-                      alt=""
-                      width="350"
-                      height="350"
-                    />
-                  </picture>
-                </li>
-                <li class="product__item-img">
-                  <picture>
-                    <source
                       srcset="
                         /src/images/kitchen/kc-boston-2/kc-boston-2-shimo.webp
                       "
@@ -376,8 +382,24 @@
                     />
                   </picture>
                 </li>
+                <li class="product__item-img">
+                  <picture>
+                    <source
+                      srcset="/src/images/kitchen/kc-boston-2/kc-boston-2.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="/src/images/kitchen/kc-boston-2/kc-boston-2.png"
+                      alt=""
+                      width="350"
+                      height="350"
+                    />
+                  </picture>
+                </li>
               </ul>
-              <p class="product__item-info">850х1665х1198</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">850х1665х1198</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -431,7 +453,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">850х1665х1198</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">850х1665х1198</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -467,7 +491,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">850х1564х1180</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">850х1564х1180</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -503,7 +529,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">850х1564х1180</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">850х1564х1180</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -541,7 +569,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">850х1800х1400</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">850х1800х1400</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -595,7 +625,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">850х1564х1180</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">850х1564х1180</p>
+              </div>
             </li>
             <li class="product__item" data-open-modal="product">
               <h2 class="product__item-title">
@@ -633,7 +665,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">770х800х335/1500</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">770х800х335/1500</p>
+              </div>
             </li>
             <li
               class="product__item product__item--last"
@@ -738,7 +772,9 @@
                   </picture>
                 </li>
               </ul>
-              <p class="product__item-info">755х650х1100/1500</p>
+              <div class="product__item-info--wrapper">
+                <p class="product__item-info">755х650х1100/1500</p>
+              </div>
             </li>
           </ul>
         </section>
@@ -753,7 +789,7 @@
           г.Волгодонск
         </p>
         <div class="footer__logo-wrap">
-          <a class="footer__logo">
+          <a class="footer__logo" href="index.html">
             <svg width="81" height="87">
               <use xlink:href="/src/images/spritemap.svg#logo"></use>
             </svg>
@@ -842,7 +878,7 @@
 
           <div class="modal__item-info">
             <span>Размеры (ВхГхШ)</span>
-            <span class="modal__item-size"></span>
+            <div class="modal__item-size"></div>
           </div>
 
           <button
