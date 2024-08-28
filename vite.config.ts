@@ -2,37 +2,29 @@
 import path from "path";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import { ViteMinifyPlugin } from "vite-plugin-minify";
-import packageJson from "./package.json";
-
-const getPackageName = () => {
-  return packageJson.name;
-};
-
-const getPackageNameCamelCase = () => {
-  try {
-    return getPackageName().replace(/-./g, char => char[1].toUpperCase());
-  } catch (err) {
-    throw new Error("Name property in package.json is missing.");
-  }
-};
-
-const fileName = {
-  es: `${getPackageName()}.mjs`,
-  cjs: `${getPackageName()}.cjs`,
-  iife: `${getPackageName()}.iife.js`,
-};
-
-const formats = Object.keys(fileName) as Array<keyof typeof fileName>;
+import { resolve } from "path";
 
 export default {
   base: "./",
   build: {
-    outDir: "./build/dist",
-    lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
-      name: getPackageNameCamelCase(),
-      formats,
-      fileName: format => fileName[format],
+    outDir: "./build",
+    rollupOptions: {
+      input: {
+        index: resolve(__dirname, "index.html"),
+        bedrooms: resolve(__dirname, "bedrooms.html"),
+        cabinet: resolve(__dirname, "cabinet.html"),
+        chairs: resolve(__dirname, "chairs.html"),
+        "coffee-tables": resolve(__dirname, "coffee-tables.html"),
+        contacts: resolve(__dirname, "contacts.html"),
+        dressers: resolve(__dirname, "dressers.html"),
+        kitchen: resolve(__dirname, "kitchen.html"),
+        mirrors: resolve(__dirname, "mirrors.html"),
+        others: resolve(__dirname, "others.html"),
+        "pc-tables": resolve(__dirname, "pc-tables.html"),
+        "table-dressings": resolve(__dirname, "table-dressings.html"),
+        tv: resolve(__dirname, "tv.html"),
+        wardrobes: resolve(__dirname, "wardrobes.html"),
+      },
     },
   },
   test: {},
@@ -45,31 +37,10 @@ export default {
   plugins: [
     ViteMinifyPlugin({}),
     ViteImageOptimizer({
-      test: /\.(jpe?g|png|svg)$/i,
+      test: /\.(jpe?g|png)$/i,
       includePublic: false,
       logStats: true,
       ansiColors: true,
-      svg: {
-        multipass: true,
-        plugins: [
-          {
-            name: "preset-default",
-            params: {
-              overrides: {
-                cleanupNumericValues: false,
-                convertPathData: {
-                  floatPrecision: 2,
-                  forceAbsolutePath: false,
-                  utilizeAbsolute: false,
-                },
-                removeViewBox: false, // https://github.com/svg/svgo/issues/1128
-                cleanupIds: false,
-              },
-            },
-          },
-          "removeDimensions",
-        ],
-      },
       png: {
         // https://sharp.pixelplumbing.com/api-output#png
         quality: 80,
