@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/src/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/src/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/src/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="preload"
+      href="/src/fonts/montserrat-v26-cyrillic_latin-regular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/src/fonts/montserrat-v26-cyrillic_latin-800.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pride</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" data-header="sticky">
+        <nav class="header__nav">
+          <div class="header__overlay"></div>
+          <button
+            class="header__burger"
+            type="button"
+            aria-label="Переключатель отображения меню"
+            aria-pressed="false"
+            data-burger="burger"
+          >
+            <span class="header__burger-icon">
+              <svg width="5" height="20">
+                <use xlink:href="/src/images/spritemap.svg#menu"></use>
+              </svg>
+            </span>
+          </button>
+          <a
+            class="header__download"
+            href="/src/download/Pride-catalog.pdf"
+            download
+          >
+            Скачать каталог
+          </a>
+          <a class="header__logo" href="index.html">
+            <svg width="200" height="200">
+              <use xlink:href="/src/images/spritemap.svg#logo"></use>
+            </svg>
+          </a>
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="index.html"
+                data-close-menu="close-menu"
+              >
+                Продукция
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#" data-close-menu="close-menu">
+                Наше производство
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="contacts"
+                data-close-menu="close-menu"
+              >
+                Контакты
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#" data-close-menu="close-menu">
+                Материалы
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <picture class="header__image">
+          <source srcset="/src/images/header-photo.webp" type="image/webp" />
+          <img
+            src="/src/images/header-photo.jpg"
+            alt=""
+            width="1440"
+            height="800"
+          />
+        </picture>
+        <p class="header__slogan">
+          На корпус впереди&emsp;На корпус впереди&emsp;На корпус
+          впереди&emsp;На корпус впереди&emsp;На корпус впереди&emsp;На корпус
+          впереди&emsp;На корпус впереди&emsp;На корпус впереди
+        </p>
+      </header>
+      <main>
+        <section class="materials">
+          <h1 class="title">Материалы</h1>
+          <div class="materials__wrapper">
+            <ul class="materials__list">
+              <li class="materials__item">
+                <h2 class="materials__item-title">ЛДСП</h2>
+                <ul class="materials__sublist">
+                  <li class="materials__sublist-item">
+                    <h3 class="materials__sublist-title">Дуб<br />сонома</h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/oak-sonoma.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/oak-sonoma.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3 class="materials__sublist-title">Дуб<br />молочный</h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/oak-milk.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/oak-milk.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Шимо<br />темный
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/shimo-dark.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/shimo-dark.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3 class="materials__sublist-title">Шимо<br />светлый</h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/shimo-light.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/shimo-light.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Венге
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/venge.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/venge.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Карбон<br />морское дерево
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/carbon.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/carbon.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Крафт<br />золотой
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/craft-gold.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/craft-gold.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Крафт<br />табак
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/craft-tabak.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/craft-tabak.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3 class="materials__sublist-title">Крафт<br />серый</h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/craft-gray.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/craft-gray.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3 class="materials__sublist-title">Крафт<br />белый</h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/craft-white.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/craft-white.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3 class="materials__sublist-title">
+                      Графит<br />только фасад
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/graphit.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/graphit.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3 class="materials__sublist-title">Белый</h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/white.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/white.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                </ul>
+              </li>
+              <li class="materials__item">
+                <h2 class="materials__item-title">Ткань</h2>
+                <ul class="materials__sublist">
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Шоколад
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/fabric-choco.png"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/fabric-choco.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3 class="materials__sublist-title">Шоколад св.</h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/fabric-choco-light.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/fabric-choco-light.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Серый
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/fabric-gray.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/fabric-gray.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Синий
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/fabric-blue.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/fabric-blue.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Фиолетовый
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/fabric-violent.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/fabric-violent.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Графитовый
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/fabric-graphit.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/fabric-graphit.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Голубой
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/fabric-light-blue.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/fabric-light-blue.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Зелёный
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/fabric-green.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/fabric-green.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Рогожка
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/fabric.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/fabric.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                </ul>
+              </li>
+              <li class="materials__item">
+                <h2 class="materials__item-title">Кожзам</h2>
+                <ul class="materials__sublist">
+                  <li class="materials__sublist-item">
+                    <h3 class="materials__sublist-title">Жёлтый</h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/leatherette-yellow.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/leatherette-yellow.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Коричневый
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="/src/images/materials/leatherette-braun.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/leatherette-braun.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3 class="materials__sublist-title">
+                      Шоколад<br />светлый
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="
+                          /src/images/materials/leatherette-choco-light.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/leatherette-choco-light.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Шоколад<br />темный
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="
+                          /src/images/materials/leatherette-choco-dark.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/leatherette-choco-dark.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Шимо<br />светлый
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="
+                          /src/images/materials/leatherette-shimo-light.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/leatherette-shimo-light.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                  <li class="materials__sublist-item">
+                    <h3
+                      class="materials__sublist-title materials__sublist-title--light"
+                    >
+                      Шимо<br />темный
+                    </h3>
+                    <picture class="materials__sublist-image">
+                      <source
+                        srcset="
+                          /src/images/materials/leatherette-shimo-dark.webp
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/src/images/materials/leatherette-shimo-dark.png"
+                        alt=""
+                        width="144"
+                        height="144"
+                      />
+                    </picture>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="materials__accessories">
+              <li class="materials__accessories-img">
+                <picture>
+                  <source
+                    srcset="/src/images/materials/rail.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/src/images/materials/rail.png"
+                    alt=""
+                    width="400"
+                    height="400"
+                  />
+                </picture>
+                <span>Полновыкатные направляющие</span>
+              </li>
+              <li class="materials__accessories-img">
+                <picture>
+                  <source
+                    srcset="/src/images/materials/loop.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/src/images/materials/loop.png"
+                    alt=""
+                    width="400"
+                    height="400"
+                  />
+                </picture>
+                <span>Петли с доводчиком</span>
+              </li>
+            </ul>
+            <ul class="materials__info">
+              <li>Использовать лампочки Цоколь Е14</li>
+              <li>Лампочки в комплект не входят</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__place">
+          <span>
+            <svg width="22" height="33">
+              <use xlink:href="/src/images/spritemap.svg#geo"></use>
+            </svg>
+          </span>
+          г.Волгодонск
+        </p>
+        <div class="footer__logo-wrap">
+          <a class="footer__logo" href="index.html">
+            <svg width="81" height="87">
+              <use xlink:href="/src/images/spritemap.svg#logo"></use>
+            </svg>
+          </a>
+          <div class="footer__rights-wrap">
+            <p class="footer__rights">Copyrights 2020</p>
+            <span>
+              <svg width="11" height="11">
+                <use xlink:href="/src/images/spritemap.svg#corp"></use>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <ul class="contacts">
+          <li class="contacts__item">
+            <span>
+              <svg width="13" height="30">
+                <use xlink:href="/src/images/spritemap.svg#phone"></use>
+              </svg>
+            </span>
+            <div class="contacts__phones">
+              <a class="contacts__link" href="tel:+79185825089">+79185825089</a>
+              <a class="contacts__link" href="tel:+79181717480">+79181717480</a>
+              <a class="contacts__link" href="tel:+79281257783">+79281257783</a>
+              <a class="contacts__link" href="tel:+79185831250">+79185831250</a>
+            </div>
+          </li>
+          <li class="contacts__item">
+            <span>
+              <svg width="19" height="14">
+                <use xlink:href="/src/images/spritemap.svg#mail"></use>
+              </svg>
+            </span>
+            <a class="contacts__link" href="mailto:oneel_@mail.ru">
+              oneel_@mail.ru
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <div class="modal" data-modal="product">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h3 class="modal__item-title">
+            <span>
+              <svg width="17" height="17">
+                <use xlink:href="/src/images/spritemap.svg#mark-right"></use>
+              </svg>
+            </span>
+            <span class="modal__title"></span>
+            <span>
+              <svg width="17" height="17">
+                <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+              </svg>
+            </span>
+          </h3>
+          <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides"></ul>
+            </div>
+
+            <div
+              class="glide__arrows modal__slide-arrows"
+              data-glide-el="controls"
+            >
+              <button
+                class="glide__arrow glide__arrow--left modal__slide-arrow modal__slide-arrow--left"
+                data-glide-dir="<"
+              >
+                <svg width="17" height="17">
+                  <use xlink:href="/src/images/spritemap.svg#mark-right"></use>
+                </svg>
+              </button>
+              <button
+                class="glide__arrow glide__arrow--right modal__slide-arrow modal__slide-arrow--right"
+                data-glide-dir=">"
+              >
+                <svg width="17" height="17">
+                  <use xlink:href="/src/images/spritemap.svg#mark-left"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="modal__item-info">
+            <span>Размеры (ВхГхШ)</span>
+            <div class="modal__item-size"></div>
+          </div>
+
+          <button
+            class="modal__close-btn btn-reset"
+            type="button"
+            aria-label="Закрыть попап"
+            data-close-modal
+          >
+            <svg width="20" height="20">
+              <use xlink:href="/src/images/spritemap.svg#x-mark"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/index.ts"></script>
+  </body>
+</html>
