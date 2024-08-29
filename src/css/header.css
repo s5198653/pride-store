@@ -96,6 +96,7 @@
   cursor: pointer;
 }
 
+.header__nav-link--active::before,
 .header__nav-link:hover::before,
 .header__nav-link:focus::before {
   content: "";
