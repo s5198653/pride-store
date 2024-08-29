@@ -63,8 +63,8 @@
           >
             Скачать каталог
           </a>
-          <a class="header__logo header__logo--contacts" href="index.html">
-            <svg width="285" height="300">
+          <a class="header__logo" href="index.html">
+            <svg width="200" height="200">
               <use xlink:href="/src/images/spritemap.svg#logo"></use>
             </svg>
           </a>
@@ -79,16 +79,16 @@
               </a>
             </li>
             <li class="header__nav-item">
-              <a
-                class="header__nav-link"
-                href="production.html"
-                data-close-menu="close-menu"
-              >
+              <a class="header__nav-link" href="#" data-close-menu="close-menu">
                 Наше производство
               </a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#" data-close-menu="close-menu">
+              <a
+                class="header__nav-link"
+                href="contacts"
+                data-close-menu="close-menu"
+              >
                 Контакты
               </a>
             </li>
@@ -103,18 +103,15 @@
             </li>
           </ul>
         </nav>
-        <div class="header__map">
-          <div style="position: relative; overflow: hidden; height: 100%">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?ll=42.120523%2C47.512919&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTMzODU2MTc2EmnQoNC-0YHRgdC40Y8sINCg0L7RgdGC0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQktC-0LvQs9C-0LTQvtC90YHQuiwg0YPQu9C40YbQsCDQpdC40LzQuNC60L7QsiwgNjAvMTciCg2yeihCFRsNPkI%2C&z=16.16"
-              width="100%"
-              height="100%"
-              frameborder="1"
-              allowfullscreen="true"
-              style="position: relative"
-            ></iframe>
-          </div>
-        </div>
+        <picture class="header__image">
+          <source srcset="/src/images/header-photo.webp" type="image/webp" />
+          <img
+            src="/src/images/header-photo.jpg"
+            alt=""
+            width="1440"
+            height="800"
+          />
+        </picture>
         <p class="header__slogan">
           На корпус впереди&emsp;На корпус впереди&emsp;На корпус
           впереди&emsp;На корпус впереди&emsp;На корпус впереди&emsp;На корпус
@@ -122,44 +119,29 @@
         </p>
       </header>
       <main>
-        <section class="info">
-          <h1 class="visually-hidden">Контакты</h1>
-          <p class="info__description">
-            Свяжитесь с нами любым удобным для вас способом.
-          </p>
-          <ul class="info__contacts contacts">
-            <li class="contacts__item">
-              <span>
-                <svg width="13" height="30">
-                  <use xlink:href="/src/images/spritemap.svg#phone"></use>
-                </svg>
-              </span>
-              <div class="contacts__phones">
-                <a class="contacts__link" href="tel:+79185825089"
-                  >+79185825089</a
-                >
-                <a class="contacts__link" href="tel:+79181717480"
-                  >+79181717480</a
-                >
-                <a class="contacts__link" href="tel:+79281257783"
-                  >+79281257783</a
-                >
-                <a class="contacts__link" href="tel:+79185831250"
-                  >+79185831250</a
-                >
-              </div>
-            </li>
-            <li class="contacts__item">
-              <span>
-                <svg width="19" height="14">
-                  <use xlink:href="/src/images/spritemap.svg#mail"></use>
-                </svg>
-              </span>
-              <a class="contacts__link" href="mailto:oneel_@mail.ru">
-                oneel_@mail.ru
-              </a>
-            </li>
-          </ul>
+        <section class="production">
+          <h1 class="title">Наше производство</h1>
+          <div class="production__info">
+            <p>
+              Мебельное производство «Прайд» — успешное, динамично развивающееся
+              мебельное предприятие, основным направлением деятельности которого
+              является оптовое производство корпусной мебели. Главный критерий
+              работы фабрики — качество, основой которого являются: оснащение
+              новейшим оборудованием, налаженная система сбыта и снабжения,
+              качественные материалы, комплектующие, сырье, поставляемые
+              надежными партнерами, высококвалифицированный персонал, контроль
+              качества.
+            </p>
+            <p>
+              «Прайд» – это качественная стильная мебель, доступная каждому!
+            </p>
+            <p>
+              Обращаем ваше внимание на то, что данный сайт и все информационные
+              материалы, каталоги, статьи и цены, размещенные на сайте, носят
+              информационный характер и ни при каких условиях не являются
+              публичной офертой.
+            </p>
+          </div>
         </section>
       </main>
       <footer class="footer">

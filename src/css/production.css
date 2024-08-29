@@ -1,0 +1,34 @@
+.production {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 70px 75px;
+
+  @media (max-width: 1024px) {
+    padding: 30px 10px 40px;
+    gap: 20px;
+  }
+}
+
+.production__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+
+  font-size: 21px;
+
+  @media (max-width: 1439px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+.production__info p {
+  margin: 0;
+  width: 100%;
+  text-align: justify;
+}
