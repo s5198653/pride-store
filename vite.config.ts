@@ -24,6 +24,8 @@ export default {
         "table-dressings": resolve(__dirname, "table-dressings.html"),
         tv: resolve(__dirname, "tv.html"),
         wardrobes: resolve(__dirname, "wardrobes.html"),
+        materials: resolve(__dirname, "materials.html"),
+        production: resolve(__dirname, "production.html"),
       },
     },
   },
