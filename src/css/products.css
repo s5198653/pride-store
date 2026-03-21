@@ -52,10 +52,6 @@
   }
 }
 
-.product__item--last {
-  border: unset;
-}
-
 .product__item--no-border {
   @media (max-width: 1024px) {
     border: unset;
@@ -65,6 +61,41 @@
 .product__item--underline {
   @media (max-width: 1024px) {
     border-bottom: 2px solid var(--color-gold);
+  }
+}
+
+/*
+ * Нижняя линия только если под карточкой в сетке есть ещё ряд.
+ * 3 колонки: последний ряд — 1, 2 или 3 карточки (остаток от деления числа на 3).
+ * 2 колонки: последний ряд — 1 или 2 карточки.
+ * :has() + :last-child определяют, сколько элементов в последнем ряду.
+ */
+@media (min-width: 1025px) {
+  .product__list:has(> .product__item:nth-child(3n + 1):last-child)
+    > .product__item:nth-last-child(-n + 1) {
+    border-bottom: unset;
+  }
+
+  .product__list:has(> .product__item:nth-child(3n + 2):last-child)
+    > .product__item:nth-last-child(-n + 2) {
+    border-bottom: unset;
+  }
+
+  .product__list:has(> .product__item:nth-child(3n):last-child)
+    > .product__item:nth-last-child(-n + 3) {
+    border-bottom: unset;
+  }
+}
+
+@media (max-width: 1024px) {
+  .product__list:has(> .product__item:nth-child(2n + 1):last-child)
+    > .product__item:nth-last-child(-n + 1) {
+    border-bottom: unset;
+  }
+
+  .product__list:has(> .product__item:nth-child(2n):last-child)
+    > .product__item:nth-last-child(-n + 2) {
+    border-bottom: unset;
   }
 }
 
@@ -123,6 +154,7 @@
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center;
 
   @media (max-width: 768px) {
     img {
@@ -132,6 +164,50 @@
   }
 }
 
+/* Не квадратные кадры (интерьеры и т.п.) — без растягивания в клетке 350×350 */
+.product__item-img img {
+  object-fit: contain;
+}
+
 .product__item-img:not(:first-child) {
   display: none;
+}
+
+/* Источник заполняет кадр сильнее типовых 350×350 — визуально выравниваем с соседними карточками */
+.product__item-img--fit-narrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 350px;
+}
+
+.product__item-img--fit-narrow picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product__item-img--fit-narrow img {
+  width: auto;
+  height: auto;
+  max-width: 68%;
+  max-height: 68%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .product__item-img--fit-narrow {
+    width: 100px;
+    height: 100px;
+  }
+
+  .product__item-img-wrapper .product__item-img--fit-narrow img {
+    width: auto;
+    height: auto;
+    max-width: 68%;
+    max-height: 68%;
+  }
 }

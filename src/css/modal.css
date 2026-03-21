@@ -215,6 +215,7 @@
 .modal img {
   width: 520px;
   height: 520px;
+  object-fit: contain;
 
   @media (max-width: 1024px) {
     width: 350px;
