@@ -1,4 +1,5 @@
-const config = {
+/** @type {import("dts-bundle-generator").BundlerConfig} */
+module.exports = {
   entries: [
     {
       filePath: "./src/index.ts",
@@ -7,5 +8,3 @@ const config = {
     },
   ],
 };
-
-module.exports = config;
